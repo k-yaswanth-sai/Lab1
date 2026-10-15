@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>STUDENT RESULT MANAGEMENT SYSTEM</title>
+<style>
+.section1{
+display:flex;
+flex-direction:row;
+justify-content:center;
+}
+.section2{
+display:grid;
+grid-template-rows:20% 40% 40%;
+border:2px solid black;
+border-radius:15px;
+width:480;
+height:540;
+justify-content:center;
+background-color:lightblue;
+}
+
+.section2 label{
+display:inline-block;
+width:120;
+}
+
+
+</style>
+</head>
+
+<body>
+<div class="section1">
+<div class="section2">
+<div >
+<label>Name :</label><input type="text" id="email" placeholder="Enter your email"></label>
+</div>
+<div>
+<label>Student no</label>
+<input type="text"  placeholder="Enter your number"
+</div>
+<br/>
+<br/>
+<div>
+<label>Subject1 marks</label>
+
+<input type="text" id="s1" placeholder="Enter your subject1">
+<span id="invalid"></span>
+
+</div>
+<br/>
+<br/>
+<div>
+<label>Subject2 marks</label>
+<input type="text" id="s2" placeholder="Enter your subject2">
+</div>
+
+<br/>
+<br/>
+<div>
+<button onclick="add()">Submit</button>
+</div>
+<p id="p1"></p>
+<p id="p2"></p>
+
+<p id="p3"></p>
+</div>
+</div>
+<script>
+function validate(s1){
+var i;
+var k=0;
+ 
+for(i=0;i<s1.length;i++){
+
+
+if (s1[i]>='A' && s1[i]<='Z'){
+k++;
+}
+
+else if(s1[i]>='a' && s1[i]<='z'){
+k++;
+}
+
+}
+if (k>=1){
+return false;
+}
+else{
+return true;
+}
+}
+
+
+function add(){
+
+var subject1=document.getElementById('s1').value;
+var subject2=document.getElementById('s2').value;
+invalid.innerHTML="";
+var valid=true;
+if(!validate(subject1) || !validate(subject2)){
+
+invalid.innerHTML="Enter valid marks";
+valid=false;
+}
+if (valid){
+var m=parseInt(subject1)+parseInt(subject2);
+var n=(m/200)*100;
+var d;
+if (m>80){
+d="pass";
+}
+else {
+d="notpassed";
+}
+
+document.getElementById('p1').innerHTML="Total "+m;
+
+
+
+
+document.getElementById('p2').innerHTML="Percentage "+n;
+document.getElementById('p3').innerHTML=d;
+}
+}
+
+</script>
+</body>
+</html>

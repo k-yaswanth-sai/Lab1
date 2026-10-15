@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>LOGINPAGE</title>
+
+<style>
+.registrationpage{
+display:flex;
+flex-direction:row;
+justify-content:center;
+margin:40px;
+}
+.section1 label{
+display:inline-block;
+width:120;
+}
+
+.section1{
+dispaly:grid;
+grif-template-rows:15% 60% 25%;
+background-color:lightblue;
+border:2px solid black;
+justify-content:center;
+border-radius:15px;
+   
+}
+
+.section1 span{
+color:red;
+}
+
+
+</style>
+</head>
+<body>
+<div class="registrationpage" >
+
+
+
+<div class="section1">
+<h2 align="center">Registration Page</h2>
+<div class="section2">
+<label>Username :</label>
+
+<input type="text" id="username" placeholder="username"></input>
+<span id="invalidusername"></span>
+</div>
+
+<br/>
+<br/>
+
+<div class="section3">
+<label>Email :</label><input type="email" id="email" placeholder="Enter your email"></label>
+<span id="invalidemail"></span>
+
+
+</div>
+<br/>
+<br/>
+<div class="section4">
+<label>Password :</label>
+<input type="password" id="password" placeholder="Enter your password">
+<span id="invalidpassword" style="color:red"></span>
+</div>
+<br/>
+<br/>
+<div class="section5">
+<label>Confirm Password :</label>
+<input type="password" id="password2" placeholder="confirm password">
+
+<span id ="invalidconfirmpassword" style="color:blue;"></span>
+</div>
+<br/>
+<br/>
+<div class="section6">
+<button onclick="login()">Register</button>
+<span id="validlogin" style="color:green;"></span></div>
+</div>
+</div>
+<script>
+function validateEmail(email){
+return email.includes('@')
+}
+function validatePassword(password){
+if (password.length<8){
+return false;
+}     
+var i;
+var n=false;
+var m=false;
+for(i=0;i<password.length;i++){
+
+if(password[i]>='A' && password[i]<='Z'){
+n=true;
+}
+if(password[i]>='0'&&password[i]<='9'){
+m=true;
+}
+}
+if(m&&n){
+return true;
+}
+else{
+return false;
+}
+}
+function login(){
+var email=document.getElementById('email').value;
+var password=document.getElementById('password').value;
+var invalidemail=document.getElementById('invalidemail');
+var invalidpassword=document.getElementById('invalidpassword');
+var validlogin=document.getElementById('validlogin');
+var valid=true;
+invalidemail.innerHTML="";
+invalidpassword.innerHTML="";
+validlogin.innerHTML="";
+invalidconfirmpassword.innerHTML="";
+if(!validateEmail(email)){
+invalidemail.innerHTML="Enter a valid email";
+valid=false;
+}
+if(!validatePassword(password)){
+
+invalidpassword.innerHTML="Enter a valid password";
+
+
+valid=false
+}
+if(password!=password2){
+invalidconfirmpassword.innerHTML="password not match";
+valid=false;
+}
+if(valid){
+validlogin.innerHTML="valid login";
+
+}
+else{
+validlogin.innerHTML="invalid login";
+}
+}
+</script>
+</body>
+</html>

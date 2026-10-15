@@ -1,0 +1,176 @@
+<html>
+<head>
+    <title>Farmer-Friendly Marketplace</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: grid;
+      gap: 8px;
+      background-color: #2e7d32;
+      grid-template-rows: auto auto;
+      grid-template-columns: 40% 40% 20%;
+      box-sizing: border-box;
+      color: white;
+    }
+    .section1 {
+      grid-row: 2/3;
+      grid-column: 1/4;
+      display: flex;
+      gap: 40px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      border-top: 2px solid white;
+    }
+    .section2 {
+      grid-row: 1/2;
+      grid-column: 1/2;
+      padding: 10px;
+    }
+    .section2 img {
+      width: 100px;
+      height: auto;
+    }
+    .section3 {
+      grid-row: 1/2;
+      grid-column: 2/3;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .section4 {
+      grid-row: 1/2;
+      grid-column: 3/4;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      align-items: center;
+      padding-right: 10px;
+    }
+    .banner {
+      width: 100%;
+      padding: 10px;
+      background-color: #fdd835;
+      overflow: hidden;
+    }
+    .banner img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+    }
+    .slider {
+      display: flex;
+      width: 300%;
+      animation: slide 12s infinite;
+    }
+    .slider img {
+      width: 33.3333%;
+    }
+    @keyframes slide {
+      0%, 28% { transform: translateX(0); }
+      33%, 61% { transform: translateX(-33.3333%); }
+      66%, 94% { transform: translateX(-66.6666%); }
+      100% { transform: translateX(0); }
+    }
+    .section5 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 20px;
+    }
+    .section5 div {
+      border: 1px solid #2e7d32;
+      text-align: center;
+      padding: 10px;
+      background: #f9f9f9;
+      color: black;
+    }
+    .section5 img {
+      width: 120px;
+      margin-bottom: 10px;
+    }
+    .section6 {
+      background-color: lightblue;
+      text-align: center;
+      padding: 20px;
+    }
+    .section7 {
+      background-color: black;
+      color: white;
+      padding: 20px;
+    }
+    .section8 {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section2"><img src="logo.png" alt="Marketplace Logo"></div>
+    <div class="section3">
+      <input type="text" placeholder="Search farm products">
+      <input type="button" value="Search">
+    </div>
+    <div class="section1">
+      <div>Home</div>
+      <div>Farmers</div>
+      <div>Buyers</div>
+      <div>Sales Tracking</div>
+      <div>Market Trends</div>
+    </div>
+    <div class="section4">
+      <div>Register |</div>
+      <div>Login |</div>
+      <div>Cart |</div>
+      <div>About Us</div>
+    </div>
+  </div>
+
+  <section class="banner">
+    <div class="slider">
+      <img src="farm1.jpg" alt="Fresh Produce">
+      <img src="farm2.jpg" alt="Organic Crops">
+      <img src="farm3.jpg" alt="Dairy Products">
+    </div>
+  </section>
+
+  <div class="section5">
+    <div>
+      <img src="tomatoes.jpg" alt="Tomatoes">
+      <b>Fresh Tomatoes</b><br>₹50/kg<br><button>Add to Cart</button>
+    </div>
+    <div>
+      <img src="rice.jpg" alt="Rice">
+      <b>Organic Rice</b><br>₹80/kg<br><button>Add to Cart</button>
+    </div>
+    <div>
+      <img src="milk.jpg" alt="Milk">
+      <b>Fresh Milk</b><br>₹40/litre<br><button>Add to Cart</button>
+    </div>
+    <div>
+      <img src="wheat.jpg" alt="Wheat">
+      <b>Wheat</b><br>₹35/kg<br><button>Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="section6">
+    <b>Today’s Offers</b><br><br>20% off on organic produce
+  </div>
+
+  <div class="section7">
+    <b>Services</b><br><br>
+    <div class="section8">
+      <b>Direct Farmer Access</b>
+      <b>Sales Tracking Dashboard</b>
+      <b>Fast Delivery</b>
+      <b>Customer Support</b>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>LOGINPAGE</title>
+</head>
+<body>
+<h2>Login page</h2>
+<label>Email </label><input type="email" id="email" placeholder="Enter your email"></label>
+<span id="invalidemail"></span>
+<br/>
+<br/>
+<label>Password </label>
+<input type="password" id="password" placeholder="Enter your password">
+<span id="invalidpassword"></span>
+<button onclick="login()">Login</button>
+<span id="validlogin"></span>
+<script>
+function validateEmail(email){
+return email.includes('@')
+}
+function validatePassword(password){
+if (password.length<8){
+return false;
+}
+var i;
+var n=false;
+var m=false;
+for(i=0;i<password.length;i++){
+
+if(password[i]>='A' && password[i]<='Z'){
+n=true;
+}
+if(password[i]>='0'&&password[i]<='9'){
+m=true;
+}
+}
+if(m&&n){
+return true;
+}
+else{
+return false;
+}
+}
+function login(){
+var email=document.getElementById('email').value;
+var password=document.getElementById('password').value;
+var invalidemail=document.getElementById('invalidemail');
+var invalidpassword=document.getElementById('invalidpassword');
+var validlogin=document.getElementById('validlogin');
+var valid=true;
+invalidemail.innerHTML="";
+invalidpassword.innerHTML="";
+validlogin.innerHTML="";
+if(!validateEmail(email)){
+invalidemail.innerHTML="Enter a valid email";
+valid=false;
+}
+if(!validatePassword(password)){
+
+invalidpassword.innerHTML="Enter a valid password";
+valid=false
+}
+if(valid){
+validlogin.innerHTML="valid login";
+
+}
+else{
+validlogin.innerHTML="invalid login";
+}
+}
+</script>
+</body>
+</html>

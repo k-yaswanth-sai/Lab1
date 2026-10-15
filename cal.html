@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Webpage</title>
+
+</head>
+<body>
+<input type="text" placeholder="Enter the value" id="m" >
+<br/>
+<input type="text" placeholder="Enter the value" id="n">
+<button  onclick="add()">Add</button>
+<p id="d"></p>
+<button  onclick="subtract()" >Subtract</button>
+<button  onclick="multiply()">Multiply</button>
+<button  onclick="divide()">Divide</button>
+<button  onclick="value()" >Value</button>
+<script>
+var m;
+var n;
+var k=0;
+function add(){
+ m=parseInt(document.getElementById('m').value);
+ n=parseInt(document.getElementById('n').value);
+
+k=m+n;
+}
+function subtract(){
+ m=parseInt(document.getElementById('m').value);
+ n=parseInt(document.getElementById('n').value);
+k=m-n;
+}
+function multiply(){
+ m=parseInt(document.getElementById('m').value);
+ n=parseInt(document.getElementById('n').value);
+k=m*n;
+
+}
+function divide(){
+m=parseInt(document.getElementById('m').value);
+ n=parseInt(document.getElementById('n').value);
+
+k=m/n;}
+
+function value(){
+document.getElementById('d').innerHTML= k;
+}
+</script>
+</body>
+</html>
