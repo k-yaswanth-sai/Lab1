@@ -1,0 +1,288 @@
+<html>
+<style>
+.container{
+display:grid;
+gap:8px;
+background-color:blue;
+grid-template-rows:auto auto;
+grid-template-columns:40% 40% 20%;
+box-sizing:border-box;
+}
+
+
+
+
+
+.section1{
+
+grid-row:2/3;
+
+align: ;
+grid-column:1/4;
+display:flex;
+width:100%;
+background-color:blue;
+
+spacing:20px;
+gap:40px;
+height:40px;
+color:white;
+flex-direction:row;
+padding:0;
+padding-bottom:20px;
+border-top:2px solid white;
+}
+.section2{
+grid-row:1/2;
+grid-column:1/2;
+width:120px;
+}
+.section2 img{
+width:100px;
+height:auto;
+}
+.section3{
+display:flex;
+gap:0px;
+height:25px;
+margin-top:20px;
+gap:20px;
+align:center;
+width:200px;
+
+
+grid-row:1/2;
+grid-column:2/4;
+}
+
+
+.section4{
+grid-row:1/2;
+color:white;
+
+align-items:center;
+grid-column:3/4;
+display:flex;
+flex-direction:row;
+}
+.banner {
+    grid-area: banner;
+    width: 100%;
+    padding: 10px;
+    background-color:yellow;
+    overflow: hidden;
+}
+
+
+.banner img {
+    display: block;
+    width: 100%;
+    height: 350px;
+}
+
+.slider {
+    display: flex;
+    width: 300%;
+    animation: slide 12s infinite;
+}
+
+.slider img {
+    width: 33.3333%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    28% {
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(-33.3333%);
+    }
+
+    61% {
+        transform: translateX(-33.3333%);
+    }
+
+    66% {
+        transform: translateX(-66.6666%);
+    }
+
+    94% {
+        transform: translateX(-66.6666%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.section5{
+
+display:grid;
+grid-template-row:40%,20%,40%;
+grid-template-column:25% 25% 25% 25%;
+border:1px solid black;
+margin-top:20px;
+border-right:2px solidblack
+}
+
+.p1{
+grid-row:1/2;
+grid-column:1/2;
+}
+.p2{
+grid-row:1/2;
+grid-column:2/3;
+}
+
+.p3{
+grid-row:1/2;
+grid-column:3/4;
+}
+.p4{
+grid-row:1/2;
+grid-column:4/5;
+}
+.section6{
+background-color:lightblue;
+
+text-align:center;
+}
+.section7{
+background-color:black;
+color:white;
+}
+.section8{
+display:flex;
+flex-direction:column;
+}
+.section5 img{
+width:120px;
+margin-bottom:20px:
+}
+.section5 div{
+border:1px solid blue;
+
+}
+</style>
+<body>
+<div class="container">
+<div class="section2"><img src="ecom.png" ></div>
+<div class="section3">
+<input type="text" placeholder="Search any item">
+<input type="button" value="Search">
+</div>
+<div class="section1">
+<div>Home</div>
+<div>Fashion</div>
+<div>Electronics</div>
+<div>Groceries</div>
+<div>Mobiles</div>
+<div>Appliances</div>
+<div>Beauty</div>
+<div>Sports</div>
+</div>
+
+<div class="section4">
+
+<div>Register |</div>
+<div>Login |</div>
+<div>Cart |</div>
+<div>About us</div>
+</div>
+</div>
+<section class="banner">
+<div class="slider">
+<img src="ecomm.png" alt="b1">
+<img src="b1.png" alt="b2">
+<img src="b2.png" alt="b3">
+<img src="b4.jpg" alt="b4">
+<img src="b5.png" alt="b5">
+<img src="b6.png" alt="b6">
+
+</div>
+</section>
+<div class="section5">
+<p>
+<div class="p1"><img src="1.jpg">
+<br/>
+<br/>
+<b>Shirt</b>
+<br/>
+<br/>
+<b>Rs 849</b>
+<br/>
+<br/>
+<b>Add to cart</b>
+
+</div>
+<div class="p2"><img src="2.jpg">
+<br/>
+<br/>
+<b>Shirt</b>
+<br/>
+<br/>
+<b>Rs 759</b>
+<br/>
+<br/>
+<b>Add to cart</b>
+
+</div>
+<div class="p3"><img src="3.jpg">
+<br/>
+<br/>
+<b>Pant</b>
+<br/>
+<br/>
+<b>Rs 649</b>
+<br/>
+<br/>
+<b>Add to cart</b>
+
+</div>
+
+<div class="p4"><img src="7.jpg">
+<br/>
+<br/>
+<b>Washing Machine</b>
+<br/>
+<br/>
+<b>Rs 14599</b>
+<br/>
+<br/>
+<b>Add to cart</b>
+</p>
+</div>
+</div>
+<div class="section6">
+<b>Today offers</b>
+
+<br/>
+<br/>
+</b>80% off on electronics</b>
+
+</div>
+</div>
+<div class="section7">
+<b>Services</b>
+<br/>
+<br/>
+<div class="section8">
+<b>Fast delivery</b>
+<b>7-days replacement</b>
+<b>Personalized Recommendations<b>
+<b>Customer Support<b>
+</div>
+</div>
+</body>
+</html>
